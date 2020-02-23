@@ -36,7 +36,7 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
 #폰트 경로
-wc = WordCLoud(background_color='white', font_path=r'C:/Windows/Fonts/malgun.ttf')
+wc = WordCloud(background_color='white', font_path=r'C:/Windows/Fonts/malgun.ttf')
 
 plt.figure(figsize=(30,30))
 for t in range(lda.num_topics):
@@ -44,7 +44,7 @@ for t in range(lda.num_topics):
     x = dict(lda.show_topic(t, 200))
     im = wc.generate_from_frequencies(x)
     plt.imshow(im)
-    plt.axis('off')
+    plt.axis("off")
     plt.title('Topic #' + str(t))
 
 #이미지 저장
